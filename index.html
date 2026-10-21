@@ -1,0 +1,1915 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desarrollo Web &amp; E-Commerce Argentina | Tiendas Rápidas y Catálogos WhatsApp</title>
+  <meta name="description"
+    content="Desarrollo de tiendas online, catálogos interactivos y sitios web a medida en Argentina. Código ultrarrápido, diseño enfocado en ventas y conexión directa a WhatsApp.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Desarrollo Web &amp; E-Commerce Argentina | Senior Dev">
+  <meta property="og:description"
+    content="Transformo tu negocio en una máquina de ventas online sin plantillas lentas. Planes accesibles, mantenimiento y dominios transparentes.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"
+    rel="stylesheet">
+
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            cyberDark: '#08080c',
+            cyberSurface: '#0f1016',
+            neonCyan: '#00f2fe',
+            neonPurple: '#7c3aed',
+            terminalGreen: '#10b981'
+          },
+          fontFamily: {
+            sans: ['Space Grotesk', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-cyberDark text-slate-100 selection:bg-neonCyan/30 selection:text-neonCyan relative bg-grid-pattern">
+
+  <!-- Spotlight Aura (Efecto linterna estilo Linear/Vercel) -->
+  <div id="spotlight-aura"></div>
+
+  <!-- Custom Double Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- =========================================================================
+       1. NAVBAR FLOTANTE GLASSMORPHISM
+       ========================================================================= -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+
+      <!-- Logo Dev -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div
+          class="h-10 w-10 rounded-xl bg-gradient-to-tr from-cyan-500/20 to-purple-500/20 border border-cyan-500/40 flex items-center justify-center group-hover:border-cyan-400 transition-all shadow-[0_0_15px_rgba(0,242,254,0.15)]">
+          <i class="fa-solid fa-code text-neonCyan text-base group-hover:rotate-12 transition-transform"></i>
+        </div>
+        <div>
+          <span class="font-mono font-bold text-lg tracking-tight text-white flex items-center">
+            &lt;<span class="text-neonCyan">Dev</span>Web <span class="text-neonPurple">/&gt;</span>
+          </span>
+          <div class="flex items-center gap-1.5 text-[11px] font-mono text-slate-400">
+            <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 status-dot-active"></span>
+            <span class="text-emerald-400 font-medium">Disponible</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 font-body text-sm font-medium text-slate-300">
+        <a href="#demo-showcase" class="hover:text-neonCyan transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-laptop-code text-xs text-neonCyan"></i> Demo en Vivo
+        </a>
+        <a href="#cotizador-presupuesto" class="hover:text-neonCyan transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-calculator text-xs text-cyan-400"></i> Cotizador
+        </a>
+        <a href="#planes" class="hover:text-neonCyan transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-tags text-xs text-purple-400"></i> Planes y Precios
+        </a>
+        <a href="#comparativa" class="hover:text-neonCyan transition-colors">Comparativa</a>
+        <a href="#infraestructura" class="hover:text-neonCyan transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-server text-xs text-emerald-400"></i> Mantenimiento &amp; Dominios
+        </a>
+        <a href="#contacto" class="hover:text-neonCyan transition-colors">Contacto</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="#contacto"
+          class="btn-shimmer px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-mono font-bold text-xs tracking-wider uppercase hover:shadow-[0_0_25px_rgba(0,242,254,0.4)] transition-all flex items-center gap-2">
+          <span>Cotizar Proyecto</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-toggle" aria-label="Abrir menú"
+        class="md:hidden text-slate-300 hover:text-neonCyan p-2 rounded-lg bg-slate-900 border border-slate-800">
+        <i class="fa-solid fa-bars text-lg"></i>
+      </button>
+
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-menu-dropdown"
+      class="hidden md:hidden px-4 pb-6 pt-2 bg-cyberDark/95 border-b border-slate-800 font-mono text-sm space-y-3">
+      <a href="#demo-showcase" class="block py-2 text-slate-200 hover:text-neonCyan"><i
+          class="fa-solid fa-laptop-code mr-2 text-neonCyan"></i> Demo en Vivo</a>
+      <a href="#cotizador-presupuesto" class="block py-2 text-slate-200 hover:text-neonCyan"><i
+          class="fa-solid fa-calculator mr-2 text-neonCyan"></i> Cotizador Interactivo</a>
+      <a href="#planes" class="block py-2 text-slate-200 hover:text-neonCyan"><i
+          class="fa-solid fa-tags mr-2 text-purple-400"></i> Planes y Precios</a>
+      <a href="#comparativa" class="block py-2 text-slate-200 hover:text-neonCyan"><i
+          class="fa-solid fa-table-list mr-2 text-slate-400"></i> Comparativa</a>
+      <a href="#infraestructura" class="block py-2 text-slate-200 hover:text-neonCyan"><i
+          class="fa-solid fa-server mr-2 text-emerald-400"></i> Mantenimiento &amp; Dominios</a>
+      <a href="#contacto" class="block py-2 text-slate-200 hover:text-neonCyan"><i
+          class="fa-solid fa-paper-plane mr-2 text-neonCyan"></i> Contacto Directo</a>
+      <div class="pt-2">
+        <a href="#contacto"
+          class="block text-center w-full py-3 rounded-lg bg-cyan-500 text-slate-950 font-bold uppercase text-xs">Cotizar
+          Proyecto</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. HERO SECTION IMPACTANTE CON CANVAS &amp; CODE PREVIEW
+       ========================================================================= -->
+  <section id="hero"
+    class="relative min-h-[92vh] pt-32 pb-20 flex items-center justify-center overflow-hidden bg-radial-gradient">
+
+    <!-- Canvas de Nodos y Partículas -->
+    <div class="absolute inset-0 pointer-events-none z-0">
+      <canvas id="hero-canvas" class="w-full h-full opacity-60"></canvas>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+        <!-- Columna Izquierda: Copywriting y Llamados a la Acción -->
+        <div class="lg:col-span-7 space-y-6">
+
+          <!-- Badge de Estado en Vivo -->
+          <div
+            class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/60 shadow-[0_0_15px_rgba(16,185,129,0.1)] text-xs font-mono">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 status-dot-active"></span>
+            <span class="text-slate-300">Sistema Online</span>
+            <span class="text-slate-600">|</span>
+            <span class="text-neonCyan font-semibold">2 cupos disponibles este mes</span>
+          </div>
+
+          <!-- Título Principal con Efecto Suave Fade-in-up y Degradado Fluido -->
+          <h1
+            class="hero-title-smooth text-4xl sm:text-5xl lg:text-6xl font-heading font-bold tracking-tight hero-text-gradient-flow leading-[1.12]">
+            Transformo tu negocio en una máquina de ventas online.
+          </h1>
+
+          <!-- Subtítulo de Conversión -->
+          <p class="text-base sm:text-lg text-slate-300 font-body max-w-2xl leading-relaxed">
+            Desarrollo de <span class="text-white font-semibold">tiendas online, catálogos interactivos y sistemas web a
+              medida</span>. Sin plantillas genéricas lentas: código ultrarrápido, diseño 100% adaptable y enfocado
+            directamente en cerrar ventas por WhatsApp o pasarelas automáticas.
+          </p>
+
+          <!-- Badges de Alto Rendimiento -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 font-mono text-xs">
+            <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800/80 flex items-center gap-2.5">
+              <i class="fa-solid fa-gauge-high text-emerald-400 text-base"></i>
+              <div>
+                <p class="font-bold text-white">99/100</p>
+                <p class="text-[10px] text-slate-400">Lighthouse</p>
+              </div>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800/80 flex items-center gap-2.5">
+              <i class="fa-solid fa-mobile-screen text-neonCyan text-base"></i>
+              <div>
+                <p class="font-bold text-white">100%</p>
+                <p class="text-[10px] text-slate-400">Mobile First</p>
+              </div>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800/80 flex items-center gap-2.5">
+              <i class="fa-solid fa-bolt text-amber-400 text-base"></i>
+              <div>
+                <p class="font-bold text-white">&lt; 0.8s</p>
+                <p class="text-[10px] text-slate-400">Carga Real</p>
+              </div>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800/80 flex items-center gap-2.5">
+              <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i>
+              <div>
+                <p class="font-bold text-white">Directo</p>
+                <p class="text-[10px] text-slate-400">Checkout WA</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTAs Principales -->
+          <div class="flex flex-wrap items-center gap-4 pt-4">
+            <a href="#planes"
+              class="btn-shimmer px-7 py-3.5 rounded-xl bg-gradient-to-r from-neonCyan via-blue-500 to-neonPurple text-slate-950 font-mono font-bold text-sm tracking-wide shadow-[0_0_30px_rgba(0,242,254,0.35)] hover:shadow-[0_0_45px_rgba(0,242,254,0.5)] transition-all flex items-center gap-2">
+              <i class="fa-solid fa-rocket"></i>
+              <span>Ver Planes &amp; Precios</span>
+            </a>
+            <a href="#demo-showcase"
+              class="px-6 py-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-700/70 hover:border-neonCyan/50 text-slate-200 font-mono text-sm transition-all flex items-center gap-2">
+              <i class="fa-solid fa-circle-play text-neonCyan"></i>
+              <span>Probar Demo en Vivo</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Columna Derecha: Ventana VS Code / Editor Interactivo -->
+        <div class="lg:col-span-5">
+          <div class="glass-card spotlight-card p-1 shadow-2xl border-slate-700/80 animate-float">
+
+            <!-- Barra superior ventana estilo Mac -->
+            <div
+              class="px-4 py-3 bg-slate-950/90 rounded-t-xl border-b border-slate-800/80 flex items-center justify-between font-mono text-xs">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-rose-500/80 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
+                <span class="text-slate-400 ml-2 font-medium">tienda-core.ts</span>
+              </div>
+              <!-- Pestañas de la ventana -->
+              <div class="flex items-center gap-1 bg-slate-900 p-0.5 rounded-lg border border-slate-800 text-[11px]">
+                <button id="hero-tab-code" class="tab-btn px-2.5 py-1 rounded tab-active transition-all">Código</button>
+                <button id="hero-tab-preview"
+                  class="tab-btn px-2.5 py-1 rounded text-slate-400 hover:text-white transition-all">Preview</button>
+              </div>
+            </div>
+
+            <!-- Contenido Vista Código -->
+            <div id="hero-content-code"
+              class="p-5 font-mono text-[12px] leading-relaxed bg-[#0a0b10] rounded-b-xl overflow-x-auto text-slate-300">
+              <div class="flex">
+                <div class="text-slate-600 select-none pr-4 text-right border-r border-slate-800">
+                  01<br>02<br>03<br>04<br>05<br>06<br>07<br>08<br>09<br>10<br>11<br>12<br>13
+                </div>
+                <div class="pl-4">
+                  <p><span class="syn-keyword">import</span> { <span class="syn-var">FastStore</span>, <span
+                      class="syn-var">WhatsAppCheckout</span> } <span class="syn-keyword">from</span> <span
+                      class="syn-string">'@dev/engine'</span>;</p>
+                  <p class="syn-comment">// Tienda optimizada para ventas en Argentina</p>
+                  <p><span class="syn-keyword">export const</span> <span class="syn-fn">configurarTienda</span> = ()
+                    =&gt; ({</p>
+                  <p class="pl-4"><span class="syn-var">motor</span>: <span class="syn-string">'Zero-Bloat Vanilla
+                      Core'</span>,</p>
+                  <p class="pl-4"><span class="syn-var">latenciaArgentina</span>: <span class="syn-num">38</span>, <span
+                      class="syn-comment">// milisegundos</span></p>
+                  <p class="pl-4"><span class="syn-var">checkout</span>: <span class="syn-fn">WhatsAppCheckout</span>({
+                  </p>
+                  <p class="pl-8"><span class="syn-var">formatoPedido</span>: <span
+                      class="syn-string">'Auto-Calculado'</span>,</p>
+                  <p class="pl-8"><span class="syn-var">comisionPlataforma</span>: <span class="syn-num">0.0</span>,
+                    <span class="syn-comment">// 0% comisión</span>
+                  </p>
+                  <p class="pl-8"><span class="syn-var">pago</span>: [<span class="syn-string">'MercadoPago'</span>,
+                    <span class="syn-string">'Transferencia'</span>]
+                  </p>
+                  <p class="pl-4">}),</p>
+                  <p class="pl-4"><span class="syn-var">conversionGarantizada</span>: <span
+                      class="syn-keyword">true</span></p>
+                  <p>});</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contenido Vista Preview Miniatura -->
+            <div id="hero-content-preview" class="hidden p-5 bg-[#0a0b10] rounded-b-xl">
+              <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between">
+                <div>
+                  <span
+                    class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-semibold border border-emerald-500/30">PEDIDO
+                    ENTRANDO</span>
+                  <h4 class="text-sm font-bold text-white mt-1">Café Bourbon x 250g + Molino</h4>
+                  <p class="text-xs text-slate-400 font-mono">Total: $62.500 ARS • Pago Directo</p>
+                </div>
+                <div
+                  class="h-10 w-10 rounded-full bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400">
+                  <i class="fa-brands fa-whatsapp text-xl"></i>
+                </div>
+              </div>
+              <div
+                class="mt-3 p-3 rounded-lg bg-cyan-950/30 border border-cyan-800/40 text-xs font-mono text-cyan-300 flex items-center gap-2">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Tasa de conversión estimada: <b>+320% vs links tradicionales</b></span>
+              </div>
+            </div>
+
+            <!-- Status bar inferior -->
+            <div
+              class="px-4 py-2 bg-slate-950/90 rounded-b-xl border-t border-slate-800/80 flex items-center justify-between font-mono text-[10px] text-slate-400">
+              <div class="flex items-center gap-3">
+                <span><i class="fa-solid fa-code-branch text-purple-400 mr-1"></i>main</span>
+                <span><i class="fa-solid fa-check text-emerald-400 mr-1"></i>0 errors</span>
+              </div>
+              <span class="text-neonCyan">TypeScript 5.4 • UTF-8</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. SECCIÓN "DEMO INTERACTIVA DE MAQUETACIÓN" (SHOWCASE EN VIVO)
+       ========================================================================= -->
+  <section id="demo-showcase" class="py-24 relative border-t border-slate-800/80 bg-cyberSurface/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Encabezado de la sección -->
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-14">
+        <div
+          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-neonCyan font-mono text-xs font-semibold">
+          <i class="fa-solid fa-flask"></i> Showcase Interactivo en Vivo
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-heading font-bold text-white tracking-tight">
+          Probá la experiencia de tienda <span class="text-gradient-cyan">en tiempo real</span>
+        </h2>
+        <p class="text-slate-300 font-body text-base">
+          Esta no es una maqueta estática. Hacé clic en los productos, sumalos al carrito y probá cómo se genera de
+          forma instantánea el pedido estructurado para WhatsApp.
+        </p>
+      </div>
+
+      <!-- Selector de Vistas de Dispositivo -->
+      <div class="flex justify-center mb-8">
+        <div class="inline-flex p-1.5 rounded-xl bg-slate-900 border border-slate-800 font-mono text-xs">
+          <button id="demo-tab-desktop" class="px-4 py-2 rounded-lg tab-active flex items-center gap-2 transition-all">
+            <i class="fa-solid fa-desktop"></i>
+            <span class="hidden sm:inline">Vista Desktop</span>
+          </button>
+          <button id="demo-tab-mobile"
+            class="px-4 py-2 rounded-lg text-slate-400 hover:text-white flex items-center gap-2 transition-all">
+            <i class="fa-solid fa-mobile-screen"></i>
+            <span class="hidden sm:inline">Vista Mobile</span>
+          </button>
+          <button id="demo-tab-flow"
+            class="px-4 py-2 rounded-lg text-slate-400 hover:text-white flex items-center gap-2 transition-all">
+            <i class="fa-solid fa-diagram-project text-purple-400"></i>
+            <span>Flujo WhatsApp</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mockup Frame Container -->
+      <div id="demo-device-frame" class="mx-auto transition-all duration-500 w-full">
+        <div class="glass-card spotlight-card border-slate-700 shadow-2xl overflow-hidden">
+
+          <!-- Desktop Browser Address Bar Mockup -->
+          <div
+            class="desktop-chrome-header px-4 py-3 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-rose-500/70 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-500/70 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-500/70 inline-block"></span>
+            </div>
+            <div class="flex-1 max-w-md mx-4">
+              <div
+                class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-400 flex items-center justify-between">
+                <span class="flex items-center gap-1.5 text-emerald-400">
+                  <i class="fa-solid fa-lock text-[10px]"></i>
+                  <span class="text-slate-300">https://tu-tienda.com.ar</span>
+                </span>
+                <span class="text-[10px] text-slate-500">SSL 256-bit</span>
+              </div>
+            </div>
+            <!-- Carrito Trigger -->
+            <button id="demo-open-cart-btn"
+              class="relative p-2 text-slate-300 hover:text-neonCyan rounded-lg bg-slate-900 border border-slate-800 transition-colors">
+              <i class="fa-solid fa-cart-shopping text-sm"></i>
+              <span id="demo-cart-count"
+                class="hidden absolute -top-1.5 -right-1.5 h-5 w-5 rounded-full bg-neonCyan text-slate-950 font-mono font-bold text-[10px] items-center justify-center">0</span>
+            </button>
+          </div>
+
+          <!-- Smartphone Notch Header Mockup (Visible solo en Vista Mobile) -->
+          <div
+            class="mobile-notch-header px-4 py-2.5 bg-slate-950 border-b border-slate-800 items-center justify-between font-mono text-[11px] text-slate-300">
+            <span class="font-bold text-xs tracking-tight">12:45</span>
+            <!-- Dynamic Island / Speaker Notch -->
+            <div
+              class="h-4 w-24 bg-slate-900 rounded-full border border-slate-800/80 flex items-center justify-center gap-1.5 px-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-blue-500/60 inline-block"></span>
+              <span class="w-6 h-1 rounded-full bg-slate-800 inline-block"></span>
+            </div>
+            <div class="flex items-center gap-2">
+              <button id="demo-open-cart-btn-mobile" class="relative text-cyan-400 p-1">
+                <i class="fa-solid fa-cart-shopping text-xs"></i>
+                <span id="demo-cart-count-mobile"
+                  class="hidden absolute -top-1 -right-1.5 h-3.5 w-3.5 rounded-full bg-neonCyan text-slate-950 font-mono font-bold text-[8px] items-center justify-center">0</span>
+              </button>
+              <i class="fa-solid fa-battery-full text-xs text-emerald-400"></i>
+            </div>
+          </div>
+
+          <!-- Mini Tienda Body -->
+          <div class="p-6 bg-slate-950/80">
+
+            <!-- Banner promocional de la tienda demo -->
+            <div
+              class="p-4 sm:p-6 rounded-2xl bg-gradient-to-r from-cyan-950/60 via-purple-950/40 to-slate-900 border border-cyan-500/20 mb-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div>
+                <span
+                  class="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-neonCyan/20 text-neonCyan border border-neonCyan/30">Lanzamiento</span>
+                <h3 class="text-lg sm:text-xl font-heading font-bold text-white mt-1">Café de Especialidad &amp;
+                  Accesorios Barista</h3>
+                <p class="text-xs text-slate-300 font-body">Envíos a todo el país. Coordiná tu pedido directo por
+                  WhatsApp.</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <span
+                  class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-lg border border-emerald-500/20">
+                  <i class="fa-solid fa-truck mr-1"></i> Envíos en 24hs
+                </span>
+              </div>
+            </div>
+
+            <!-- Filtros de categoría de la tienda demo -->
+            <div class="flex flex-wrap items-center gap-2 mb-6 font-mono text-xs">
+              <button data-filter="todos"
+                class="demo-filter-btn px-3 py-1.5 rounded-lg border border-cyan-500/40 bg-cyan-500/20 text-cyan-300 font-medium">Todos</button>
+              <button data-filter="cafe"
+                class="demo-filter-btn px-3 py-1.5 rounded-lg border border-slate-800 bg-slate-900 text-slate-400 hover:text-white">Café
+                en Grano</button>
+              <button data-filter="accesorios"
+                class="demo-filter-btn px-3 py-1.5 rounded-lg border border-slate-800 bg-slate-900 text-slate-400 hover:text-white">Accesorios</button>
+              <button data-filter="combos"
+                class="demo-filter-btn px-3 py-1.5 rounded-lg border border-slate-800 bg-slate-900 text-slate-400 hover:text-white">Combos
+                Promocionales</button>
+            </div>
+
+            <!-- Grilla de productos interactivos -->
+            <div id="demo-products-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <!-- Renderizado dinámicamente con JavaScript -->
+            </div>
+
+          </div>
+
+          <!-- Barra de Detalles Técnicos Incluidos -->
+          <div class="p-6 bg-slate-950 border-t border-slate-800">
+            <h4
+              class="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+              <i class="fa-solid fa-circle-check text-neonCyan"></i>
+              Estructura técnica incluida en esta maqueta:
+            </h4>
+            <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-3 font-mono text-xs">
+              <div class="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800 flex items-start gap-2">
+                <i class="fa-solid fa-images text-neonCyan mt-0.5"></i>
+                <div>
+                  <p class="font-bold text-slate-200">Banners Home</p>
+                  <p class="text-[10px] text-slate-400">Alta conversión</p>
+                </div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800 flex items-start gap-2">
+                <i class="fa-solid fa-filter text-purple-400 mt-0.5"></i>
+                <div>
+                  <p class="font-bold text-slate-200">Filtros Dinámicos</p>
+                  <p class="text-[10px] text-slate-400">Sin recarga lenta</p>
+                </div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800 flex items-start gap-2">
+                <i class="fa-solid fa-file-invoice text-emerald-400 mt-0.5"></i>
+                <div>
+                  <p class="font-bold text-slate-200">Ficha de Producto</p>
+                  <p class="text-[10px] text-slate-400">Fotos y stock</p>
+                </div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800 flex items-start gap-2">
+                <i class="fa-brands fa-whatsapp text-emerald-400 mt-0.5"></i>
+                <div>
+                  <p class="font-bold text-slate-200">Checkout WA</p>
+                  <p class="text-[10px] text-slate-400">Mensaje pre-armado</p>
+                </div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800 flex items-start gap-2">
+                <i class="fa-solid fa-magnifying-glass text-amber-400 mt-0.5"></i>
+                <div>
+                  <p class="font-bold text-slate-200">SEO Básico</p>
+                  <p class="text-[10px] text-slate-400">Google &amp; OpenGraph</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Barra inferior tipo Home Indicator para iPhone -->
+          <div class="mobile-home-indicator w-32 h-1 bg-slate-600/40 rounded-full mx-auto my-3"></div>
+
+        </div>
+      </div>
+
+        <!-- Explicación del Flujo WhatsApp (Se activa con la 3ra pestaña) -->
+        <div id="demo-flow-info"
+          class="hidden mt-8 max-w-4xl mx-auto p-6 rounded-2xl bg-slate-900/90 border border-purple-500/30 glass-card">
+          <h3 class="text-xl font-heading font-bold text-white mb-3 flex items-center gap-2">
+            <i class="fa-solid fa-diagram-project text-purple-400"></i>
+            ¿Por qué el flujo de WhatsApp Checkout convierte un 300% más en Argentina?
+          </h3>
+          <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            En el mercado local, el 70% de las ventas por internet se caen cuando el cliente tiene una duda mínima sobre
+            envíos, cuotas o stock. Nuestro sistema permite que el usuario arme su carrito en la web con cálculo de
+            precios exacto y al hacer clic en "Finalizar", se abra WhatsApp con todo el pedido desglosado para que
+            cierres
+            la venta en un segundo.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-xs pt-2">
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+              <span class="text-neonCyan font-bold">1. Selección Instantánea</span>
+              <p class="text-slate-400 mt-1">El cliente agrega productos en 1 clic sin formularios largos ni registros
+                obligatorios.</p>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+              <span class="text-purple-400 font-bold">2. Estructura de Pedido</span>
+              <p class="text-slate-400 mt-1">El sistema calcula subtotales, cantidades y genera el texto formal del
+                pedido.</p>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+              <span class="text-emerald-400 font-bold">3. Cierre en WhatsApp</span>
+              <p class="text-slate-400 mt-1">Recibís al cliente listo para pagar con su alias de transferencia o link de
+                Mercado Pago.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Drawer de Carrito para la Demo -->
+      <div id="demo-cart-modal"
+        class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm items-center justify-center p-4">
+        <div class="glass-card max-w-md w-full bg-slate-950 border-slate-700 p-6 shadow-2xl relative">
+          <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+            <h3 class="font-heading font-bold text-lg text-white flex items-center gap-2">
+              <i class="fa-solid fa-cart-shopping text-neonCyan"></i> Carrito de Compras (Demo)
+            </h3>
+            <button id="demo-close-cart-btn" class="text-slate-400 hover:text-white p-1">
+              <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+          </div>
+
+          <div id="demo-cart-items" class="py-4 max-h-60 overflow-y-auto space-y-2">
+            <!-- Items del carrito -->
+          </div>
+
+          <div class="pt-4 border-t border-slate-800 space-y-3 font-mono">
+            <div class="flex justify-between text-sm">
+              <span class="text-slate-400">Subtotal estimado:</span>
+              <span id="demo-cart-subtotal" class="font-bold text-white">$0 ARS</span>
+            </div>
+            <div class="flex justify-between text-xs text-slate-400">
+              <span>Costo de envío:</span>
+              <span class="text-emerald-400 font-medium">A coordinar por WhatsApp</span>
+            </div>
+            <button id="demo-checkout-whatsapp"
+              class="btn-shimmer w-full py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm flex items-center justify-center gap-2 transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)]">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>Simular Pedido por WhatsApp</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal de Vista Previa del Chat de WhatsApp -->
+      <div id="demo-wa-preview-modal"
+        class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm items-center justify-center p-4">
+        <div class="max-w-md w-full rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
+
+          <!-- Header de WhatsApp Dark Mode -->
+          <div class="bg-[#202c33] px-4 py-3 flex items-center justify-between text-white">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-emerald-600 flex items-center justify-center font-bold text-sm">
+                <i class="fa-solid fa-store"></i>
+              </div>
+              <div>
+                <p class="font-medium text-sm flex items-center gap-1.5">
+                  Tu Negocio Online
+                  <i class="fa-solid fa-circle-check text-emerald-400 text-xs"></i>
+                </p>
+                <p class="text-[11px] text-emerald-400 font-mono">en línea</p>
+              </div>
+            </div>
+            <button id="demo-close-wa-modal" class="text-slate-400 hover:text-white p-1">
+              <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+          </div>
+
+          <!-- Chat Body -->
+          <div class="wa-chat-bg p-4 min-h-[260px] flex flex-col justify-end">
+            <div class="max-w-[85%] self-end wa-bubble-user p-3 rounded-xl text-white text-xs space-y-2 shadow-md">
+              <pre id="demo-wa-text" class="font-mono whitespace-pre-wrap leading-relaxed text-[11px]">
+<!-- El mensaje generado dinámicamente -->
+            </pre>
+              <div class="flex items-center justify-end gap-1 text-[10px] text-emerald-200 font-mono">
+                <span>Ahora</span>
+                <i class="fa-solid fa-check-double text-sky-300"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Botón de acción real -->
+          <div class="bg-[#202c33] p-4 flex flex-col gap-2">
+            <a id="demo-wa-real-send" href="#" target="_blank"
+              class="w-full py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-mono font-bold text-xs text-center flex items-center justify-center gap-2 transition-all">
+              <i class="fa-brands fa-whatsapp text-base"></i>
+              <span>Probar abrir en mi WhatsApp Real</span>
+            </a>
+            <p class="text-[10px] text-slate-400 text-center font-mono">Simulación 100% idéntica a cómo te llegarán las
+              ventas de tus clientes.</p>
+          </div>
+
+        </div>
+      </div>
+
+  </section>
+
+  <!-- =========================================================================
+       3.5. SIMULADOR / COTIZADOR INTERACTIVO DE PRESUPUESTO EN TIEMPO REAL
+       ========================================================================= -->
+  <section id="cotizador-presupuesto" class="py-24 relative border-t border-slate-800/80 bg-cyberDark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Encabezado del Cotizador -->
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-14">
+        <div
+          class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-neonCyan font-mono text-xs font-semibold shadow-[0_0_15px_rgba(0,242,254,0.15)]">
+          <i class="fa-solid fa-calculator"></i> Cotizador Inteligente en Tiempo Real
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-heading font-bold text-white tracking-tight">
+          Calculá tu presupuesto exacto <span class="text-gradient-cyan">en vivo</span>
+        </h2>
+        <p class="text-slate-300 font-body text-base">
+          Elegí tu plan base y tildá los adicionales que necesites. Tu inversión total, el 50% de anticipo para arrancar
+          y el tiempo de entrega se calculan automáticamente sin sorpresas.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+        <!-- Panel Izquierdo: Selección de Plan Base y Add-ons -->
+        <div class="lg:col-span-7 space-y-8">
+
+          <!-- Paso 1: Seleccionar Plan Base -->
+          <div class="glass-card spotlight-card p-6 border-slate-800">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono font-bold text-neonCyan uppercase tracking-wider flex items-center gap-2">
+                <span
+                  class="w-5 h-5 rounded-full bg-cyan-500/20 text-cyan-300 flex items-center justify-center text-[10px] border border-cyan-500/40">1</span>
+                Paso 1: Seleccioná tu Plan Base
+              </span>
+              <span class="text-[11px] font-mono text-slate-400">Precios en ARS</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 font-mono text-xs">
+
+              <button type="button" data-plan-id="plan1"
+                class="budget-plan-btn p-3.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-left transition-all flex flex-col justify-between">
+                <div class="flex items-center justify-between w-full mb-1">
+                  <span class="font-bold text-slate-200">Plan 1: Código en Mano</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-400">Único</span>
+                </div>
+                <span class="text-sm font-bold text-cyan-400">$120.000 ARS</span>
+              </button>
+
+              <button type="button" data-plan-id="plan2"
+                class="budget-plan-btn active p-3.5 rounded-xl bg-slate-900 border border-cyan-500/60 text-left transition-all flex flex-col justify-between relative overflow-hidden">
+                <div
+                  class="absolute -top-1 -right-1 bg-gradient-to-l from-emerald-400 to-cyan-400 text-slate-950 font-bold text-[9px] px-2 py-0.5 rounded-bl-lg font-mono uppercase">
+                  ★ Popular
+                </div>
+                <div class="flex items-center justify-between w-full mb-1">
+                  <span class="font-bold text-white">Plan 2: Llave en Mano</span>
+                </div>
+                <span class="text-sm font-bold text-cyan-400">$220.000 + $35k/m</span>
+              </button>
+
+              <button type="button" data-plan-id="plan3"
+                class="budget-plan-btn p-3.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-left transition-all flex flex-col justify-between">
+                <div class="flex items-center justify-between w-full mb-1">
+                  <span class="font-bold text-slate-200">Plan 3: Autogestionable</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-purple-500/20 text-purple-300">Sin abono</span>
+                </div>
+                <span class="text-sm font-bold text-cyan-400">$190.000 ARS</span>
+              </button>
+
+              <button type="button" data-plan-id="plan4"
+                class="budget-plan-btn p-3.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-left transition-all flex flex-col justify-between">
+                <div class="flex items-center justify-between w-full mb-1">
+                  <span class="font-bold text-slate-200">Plan 4: Suscripción / Alquiler</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-400">SaaS</span>
+                </div>
+                <span class="text-sm font-bold text-cyan-400">$45.000 ARS / mes</span>
+              </button>
+
+              <button type="button" data-plan-id="plan5"
+                class="budget-plan-btn p-3.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-left transition-all flex flex-col justify-between">
+                <div class="flex items-center justify-between w-full mb-1">
+                  <span class="font-bold text-slate-200">Plan 5: Landing Express</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300">Catálogo WA</span>
+                </div>
+                <span class="text-sm font-bold text-cyan-400">$135.000 ARS</span>
+              </button>
+
+              <button type="button" data-plan-id="plan6"
+                class="budget-plan-btn p-3.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-left transition-all flex flex-col justify-between">
+                <div class="flex items-center justify-between w-full mb-1">
+                  <span class="font-bold text-slate-200">Plan 6: E-Commerce Full</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-blue-500/20 text-blue-300">Automático</span>
+                </div>
+                <span class="text-sm font-bold text-cyan-400">$320.000 ARS</span>
+              </button>
+
+            </div>
+          </div>
+
+          <!-- Paso 2: Tildar Extras / Add-ons -->
+          <div class="glass-card spotlight-card p-6 border-slate-800">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono font-bold text-neonCyan uppercase tracking-wider flex items-center gap-2">
+                <span
+                  class="w-5 h-5 rounded-full bg-cyan-500/20 text-cyan-300 flex items-center justify-center text-[10px] border border-cyan-500/40">2</span>
+                Paso 2: Tildá los Adicionales que Necesites
+              </span>
+              <span class="text-[11px] font-mono text-slate-400">Sumá funciones en 1 clic</span>
+            </div>
+
+            <div class="space-y-3">
+
+              <!-- Addon 1: Logo -->
+              <div
+                class="budget-addon-card p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-slate-700 transition-all flex items-center justify-between cursor-pointer group">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" data-addon-id="logo"
+                    class="budget-addon-checkbox w-4 h-4 rounded accent-cyan-400 cursor-pointer">
+                  <div>
+                    <p class="text-xs font-medium text-slate-200 group-hover:text-white">Diseño de Logo e Identidad
+                      Visual Básica</p>
+                    <p class="text-[10px] font-mono text-slate-400">Logo vectorial en alta resolución + favicon + paleta
+                      de colores</p>
+                  </div>
+                </div>
+                <span class="font-mono text-xs font-bold text-cyan-400 whitespace-nowrap ml-4">+$100.000 ARS</span>
+              </div>
+
+              <!-- Addon 2: Carga Extra de Productos -->
+              <div
+                class="budget-addon-card p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-slate-700 transition-all flex items-center justify-between cursor-pointer group">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" data-addon-id="extra_products"
+                    class="budget-addon-checkbox w-4 h-4 rounded accent-cyan-400 cursor-pointer">
+                  <div>
+                    <p class="text-xs font-medium text-slate-200 group-hover:text-white">Carga extra de 30 productos con
+                      edición de fotos</p>
+                    <p class="text-[10px] font-mono text-slate-400">Recorte de fondo, optimización de peso y redacción
+                      de fichas</p>
+                  </div>
+                </div>
+                <span class="font-mono text-xs font-bold text-cyan-400 whitespace-nowrap ml-4">+$35.000 ARS</span>
+              </div>
+
+              <!-- Addon 3: Gestión y compra de Dominio .com.ar + DNS -->
+              <div
+                class="budget-addon-card p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-slate-700 transition-all flex items-center justify-between cursor-pointer group">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" data-addon-id="domain_dns"
+                    class="budget-addon-checkbox w-4 h-4 rounded accent-cyan-400 cursor-pointer">
+                  <div>
+                    <p class="text-xs font-medium text-slate-200 group-hover:text-white">Gestión y compra de Dominio
+                      .com.ar + Configuración DNS</p>
+                    <p class="text-[10px] font-mono text-slate-400">Tramitación oficial en NIC Argentina a tu nombre y
+                      apuntamiento</p>
+                  </div>
+                </div>
+                <span class="font-mono text-xs font-bold text-cyan-400 whitespace-nowrap ml-4">+$15.000 ARS</span>
+              </div>
+
+              <!-- Addon 4: Chatbot -->
+              <div
+                class="budget-addon-card p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-slate-700 transition-all flex items-center justify-between cursor-pointer group">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" data-addon-id="chatbot"
+                    class="budget-addon-checkbox w-4 h-4 rounded accent-cyan-400 cursor-pointer">
+                  <div>
+                    <p class="text-xs font-medium text-slate-200 group-hover:text-white">Integración de Chatbot de
+                      respuestas frecuentes</p>
+                    <p class="text-[10px] font-mono text-slate-400">Widget flotante interactivo con horarios, envíos y
+                      medios de pago</p>
+                  </div>
+                </div>
+                <span class="font-mono text-xs font-bold text-cyan-400 whitespace-nowrap ml-4">+$40.000 ARS</span>
+              </div>
+
+              <!-- Addon 5: SEO Avanzado -->
+              <div
+                class="budget-addon-card p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-slate-700 transition-all flex items-center justify-between cursor-pointer group">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" data-addon-id="seo_gmb"
+                    class="budget-addon-checkbox w-4 h-4 rounded accent-cyan-400 cursor-pointer">
+                  <div>
+                    <p class="text-xs font-medium text-slate-200 group-hover:text-white">Optimización SEO Avanzada +
+                      Alta en Google Mi Negocio</p>
+                    <p class="text-[10px] font-mono text-slate-400">Aparición en Google Maps y primeras búsquedas de tu
+                      zona</p>
+                  </div>
+                </div>
+                <span class="font-mono text-xs font-bold text-cyan-400 whitespace-nowrap ml-4">+$30.000 ARS</span>
+              </div>
+
+              <!-- Addon 6: Entrega Express 72hs -->
+              <div
+                class="budget-addon-card p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-slate-700 transition-all flex items-center justify-between cursor-pointer group">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" data-addon-id="express_72h"
+                    class="budget-addon-checkbox w-4 h-4 rounded accent-amber-400 cursor-pointer">
+                  <div>
+                    <p class="text-xs font-medium text-slate-200 group-hover:text-white flex items-center gap-1.5">
+                      <span>Entrega Express Prioritaria en 72hs</span>
+                      <span
+                        class="text-[9px] font-mono px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30">⚡
+                        Rápido</span>
+                    </p>
+                    <p class="text-[10px] font-mono text-slate-400">Trabajo prioritario con dedicación exclusiva para tu
+                      fecha</p>
+                  </div>
+                </div>
+                <span class="font-mono text-xs font-bold text-amber-400 whitespace-nowrap ml-4">+$50.000 ARS</span>
+              </div>
+
+              <!-- Addon 7: Mantenimiento Mensual Opcional -->
+              <div
+                class="budget-addon-card p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-slate-700 transition-all flex items-center justify-between cursor-pointer group">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" data-addon-id="maintenance_monthly"
+                    class="budget-addon-checkbox w-4 h-4 rounded accent-emerald-400 cursor-pointer">
+                  <div>
+                    <p class="text-xs font-medium text-slate-200 group-hover:text-white flex items-center gap-1.5">
+                      <span>Sumar Mantenimiento Mensual Opcional</span>
+                      <span
+                        class="text-[9px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Abono</span>
+                    </p>
+                    <p class="text-[10px] font-mono text-slate-400">Backups semanales, seguridad y cambios de precios
+                      por WhatsApp</p>
+                  </div>
+                </div>
+                <span class="font-mono text-xs font-bold text-emerald-400 whitespace-nowrap ml-4">+$30.000
+                  ARS/mes</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Panel Derecho: Ticket de Presupuesto en Vivo -->
+        <div class="lg:col-span-5 lg:sticky lg:top-28">
+          <div class="receipt-ticket rounded-2xl p-6 sm:p-7 shadow-2xl overflow-hidden font-mono">
+
+            <!-- Encabezado de Ticket -->
+            <div class="flex items-center justify-between pb-4 border-b border-slate-800 text-[11px] text-slate-400">
+              <span class="flex items-center gap-1.5 text-neonCyan font-bold">
+                <i class="fa-solid fa-receipt"></i> TICKET DE COTIZACIÓN
+              </span>
+              <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">
+                EN VIVO
+              </span>
+            </div>
+
+            <!-- Detalle de Plan Base -->
+            <div class="py-4">
+              <span class="text-[10px] text-slate-500 uppercase tracking-wider block mb-1">Plan Base
+                Seleccionado:</span>
+              <div class="flex items-center justify-between">
+                <h4 id="calc-receipt-plan-name" class="font-bold text-sm text-white line-clamp-1">Plan 2: Llave en Mano
+                  + Mantenimiento</h4>
+                <span id="calc-receipt-plan-price"
+                  class="text-xs font-bold text-cyan-400 ml-2 whitespace-nowrap">$220.000 ARS</span>
+              </div>
+            </div>
+
+            <div class="receipt-dashed-line my-1"></div>
+
+            <!-- Lista de Adicionales -->
+            <div class="py-3">
+              <span class="text-[10px] text-slate-500 uppercase tracking-wider block mb-2">Adicionales Tildados:</span>
+              <div id="calc-receipt-addons-list" class="space-y-1.5 min-h-[40px]">
+                <div class="text-[11px] text-slate-500 italic py-1">Ningún adicional seleccionado</div>
+              </div>
+            </div>
+
+            <div class="receipt-dashed-line my-1"></div>
+
+            <!-- Tiempos de Entrega -->
+            <div class="py-3 flex items-center justify-between text-xs">
+              <span class="text-slate-400 flex items-center gap-1.5">
+                <i class="fa-solid fa-clock text-slate-500"></i> Tiempo estimado de entrega:
+              </span>
+              <span id="calc-receipt-delivery" class="font-bold text-slate-200">7 - 10 días hábiles</span>
+            </div>
+
+            <div class="receipt-dashed-line my-1"></div>
+
+            <!-- Totales -->
+            <div class="py-4 space-y-3">
+              <div>
+                <span class="text-[11px] text-slate-400 uppercase tracking-wider block">Total Inversión Única:</span>
+                <div id="calc-receipt-total-onetime" data-value="220000"
+                  class="text-3xl font-heading font-bold text-white tracking-tight mt-1 text-gradient-cyan">
+                  $220.000 ARS
+                </div>
+              </div>
+
+              <div
+                class="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-between text-xs">
+                <span class="text-slate-300 flex items-center gap-1.5">
+                  <i class="fa-solid fa-handshake text-emerald-400"></i> Anticipo 50% para iniciar:
+                </span>
+                <span id="calc-receipt-advance-50" data-value="110000" class="text-sm font-bold text-emerald-400">
+                  $110.000 ARS
+                </span>
+              </div>
+
+              <!-- Fila recurrente mensual (si aplica) -->
+              <div id="calc-receipt-monthly-row"
+                class="p-3 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-between text-xs">
+                <span class="text-slate-300 flex items-center gap-1.5">
+                  <i class="fa-solid fa-arrows-rotate text-purple-400"></i> Abono mensual recurrente:
+                </span>
+                <span id="calc-receipt-monthly-price" data-value="35000" class="text-sm font-bold text-purple-400">
+                  $35.000 ARS/mes
+                </span>
+              </div>
+            </div>
+
+            <!-- Botón para enviar por WhatsApp -->
+            <div class="pt-3 space-y-2.5">
+              <a id="calc-whatsapp-btn" href="#" target="_blank"
+                class="btn-shimmer w-full py-4 rounded-xl bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 hover:opacity-95 text-slate-950 font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(16,185,129,0.35)] transition-all">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>Enviar este presupuesto por WhatsApp</span>
+              </a>
+              <p class="text-[10px] text-slate-500 text-center leading-relaxed">
+                * Esquema formal: 50% anticipo al coordinar y 50% contra entrega final con tu total conformidad.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. SECCIÓN DE LOS 6 PLANES DE DESARROLLO (CON PRECIOS Y FILTROS)
+       ========================================================================= -->
+  <section id="planes" class="py-24 relative border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Encabezado de Planes -->
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+        <div
+          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 font-mono text-xs font-semibold">
+          <i class="fa-solid fa-shield-halved"></i> Tarifas Claras y Sin Sorpresas
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-heading font-bold text-white tracking-tight">
+          Elegí el plan perfecto para <span class="text-gradient-purple">escalar tu negocio</span>
+        </h2>
+        <p class="text-slate-300 font-body text-base">
+          Precios transparentes en pesos argentinos ($ ARS). Sin costos ocultos de renovación abusivos. 50% de anticipo
+          para iniciar y 50% contra entrega final con tu total conformidad.
+        </p>
+      </div>
+
+      <!-- Filtros de Planes -->
+      <div class="flex flex-wrap items-center justify-center gap-2.5 mb-14 font-mono text-xs">
+        <button data-category="todos"
+          class="plan-filter-btn px-4 py-2 rounded-xl bg-cyan-500 text-slate-950 font-bold transition-all shadow-[0_0_15px_rgba(0,242,254,0.3)]">
+          Todos los planes (6)
+        </button>
+        <button data-category="destacado"
+          class="plan-filter-btn px-4 py-2 rounded-xl bg-slate-900/60 text-slate-400 hover:text-white border border-slate-800 transition-all">
+          Más Elegidos
+        </button>
+        <button data-category="unico"
+          class="plan-filter-btn px-4 py-2 rounded-xl bg-slate-900/60 text-slate-400 hover:text-white border border-slate-800 transition-all">
+          Pago Único (Sin abono)
+        </button>
+        <button data-category="abono"
+          class="plan-filter-btn px-4 py-2 rounded-xl bg-slate-900/60 text-slate-400 hover:text-white border border-slate-800 transition-all">
+          Con Mantenimiento / Alquiler
+        </button>
+      </div>
+
+      <!-- Grilla de los 6 Planes Comerciales -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- ================= PLAN 1: Código en Mano ================= -->
+        <div class="tilt-card-wrapper plan-card-item" data-plan-type="todos unico">
+          <div
+            class="tilt-card glass-card spotlight-card h-full p-7 flex flex-col justify-between border-slate-800 hover:border-cyan-500/50">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="text-xs font-mono font-semibold px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">Plan
+                  01</span>
+                <span class="text-xs font-mono text-cyan-400 font-bold">Pago Único</span>
+              </div>
+              <h3 class="text-2xl font-heading font-bold text-white mb-2">Código en Mano</h3>
+              <p class="text-xs text-slate-400 font-body mb-5">
+                <b class="text-slate-200">Ideal para:</b> Agencias, diseñadores o clientes con soporte técnico propio
+                que solo necesitan la programación terminada.
+              </p>
+
+              <div class="py-4 border-y border-slate-800/80 mb-6 font-mono">
+                <div class="text-3xl font-bold text-white tracking-tight">$120.000 <span
+                    class="text-xs text-slate-400 font-normal">ARS</span></div>
+                <p class="text-[11px] text-slate-400 mt-1">Pago único • Sin mensualidades</p>
+              </div>
+
+              <!-- Lista de características -->
+              <ul class="space-y-3 font-body text-xs text-slate-300 mb-8">
+                <li class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-check text-neonCyan mt-0.5"></i>
+                  <span><b>Código fuente 100% limpio:</b> HTML5, CSS3, JavaScript modular sin dependencias
+                    pesadas.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-check text-neonCyan mt-0.5"></i>
+                  <span><b>Diseño Responsive Completo:</b> Adaptado a smartphones, tablets y monitores ultrawide.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-check text-neonCyan mt-0.5"></i>
+                  <span><b>Documentación de Despliegue:</b> Guía paso a paso para subirlo a Vercel, Netlify o
+                    cPanel.</span>
+                </li>
+                <li class="flex items-start gap-2.5 text-slate-400">
+                  <i class="fa-solid fa-minus text-slate-400 mt-0.5"></i>
+                  <span>No incluye hosting, dominio ni carga de catálogo.</span>
+                </li>
+              </ul>
+            </div>
+
+            <button data-plan-name="Plan 1: Código en Mano" data-plan-price="$120.000 ARS"
+              class="btn-hire-plan w-full py-3 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-cyan-400 text-white font-mono font-bold text-xs tracking-wider uppercase transition-all flex items-center justify-center gap-2">
+              <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+              <span>Quiero este plan</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ================= PLAN 2: Llave en Mano + Mantenimiento (DESTACADO) ================= -->
+        <div class="tilt-card-wrapper plan-card-item" data-plan-type="todos destacado abono">
+          <div
+            class="tilt-card glass-card border-glow-featured spotlight-card h-full p-7 flex flex-col justify-between relative">
+
+            <!-- Badge Destacado -->
+            <div
+              class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-neonCyan via-purple-500 to-emerald-400 text-slate-950 font-mono font-bold text-[10px] uppercase tracking-wider shadow-[0_0_20px_rgba(0,242,254,0.5)]">
+              ★ MÁS ELEGIDO / CERO PREOCUPACIONES
+            </div>
+
+            <div>
+              <div class="flex items-center justify-between mb-4 pt-1">
+                <span
+                  class="text-xs font-mono font-bold px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">Plan
+                  02</span>
+                <span class="text-xs font-mono text-emerald-400 font-bold">Servicio Integral</span>
+              </div>
+              <h3 class="text-2xl font-heading font-bold text-white mb-2">Llave en Mano + Mantenimiento</h3>
+              <p class="text-xs text-slate-300 font-body mb-5">
+                <b class="text-white">Ideal para:</b> Negocios que quieren delegar absolutamente todo y tener a su
+                programador de confianza disponible mes a mes.
+              </p>
+
+              <div class="py-4 border-y border-slate-800/80 mb-6 font-mono">
+                <div class="text-3xl font-bold text-white tracking-tight">$220.000 <span
+                    class="text-xs text-slate-400 font-normal">ARS inicial</span></div>
+                <div class="text-sm font-semibold text-neonCyan mt-1">+ $35.000 ARS / mes</div>
+                <p class="text-[11px] text-slate-400 mt-1">Web activa y mantenida sin mover un dedo</p>
+              </div>
+
+              <!-- Lista de características -->
+              <ul class="space-y-3 font-body text-xs text-slate-200 mb-8">
+                <li class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-circle-check text-emerald-400 mt-0.5"></i>
+                  <span><b>Web 100% publicada y configurada:</b> Dominio y hosting de alta velocidad listos.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-circle-check text-emerald-400 mt-0.5"></i>
+                  <span><b>Carga inicial completa:</b> Cargo hasta 20 de tus productos con fotos, descripciones y
+                    precios.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-circle-check text-emerald-400 mt-0.5"></i>
+                  <span><b>Backups semanales y seguridad SSL:</b> Monitoreo 24/7 y cero caídas de servidor.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-circle-check text-emerald-400 mt-0.5"></i>
+                  <span><b>Soporte mensual por WhatsApp:</b> Me enviás los cambios de precios o promociones y los
+                    actualizo por vos.</span>
+                </li>
+              </ul>
+            </div>
+
+            <button data-plan-name="Plan 2: Llave en Mano + Mantenimiento" data-plan-price="$220.000 ARS + $35.000/mes"
+              class="btn-hire-plan btn-shimmer w-full py-3.5 rounded-xl bg-gradient-to-r from-neonCyan via-blue-500 to-purple-600 hover:opacity-95 text-slate-950 font-mono font-bold text-xs tracking-wider uppercase transition-all flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(0,242,254,0.4)]">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>Quiero este plan</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ================= PLAN 3: Autogestionable ================= -->
+        <div class="tilt-card-wrapper plan-card-item" data-plan-type="todos unico destacado">
+          <div
+            class="tilt-card glass-card spotlight-card h-full p-7 flex flex-col justify-between border-slate-800 hover:border-purple-500/50">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="text-xs font-mono font-semibold px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">Plan
+                  03</span>
+                <span class="text-xs font-mono text-purple-400 font-bold">Sin Cuota Mensual</span>
+              </div>
+              <h3 class="text-2xl font-heading font-bold text-white mb-2">Autogestionable</h3>
+              <p class="text-xs text-slate-400 font-body mb-5">
+                <b class="text-slate-200">Ideal para:</b> Emprendedores que quieren manejar su propio stock, precios y
+                fotos sin tener que pagar abono mensual.
+              </p>
+
+              <div class="py-4 border-y border-slate-800/80 mb-6 font-mono">
+                <div class="text-3xl font-bold text-white tracking-tight">$190.000 <span
+                    class="text-xs text-slate-400 font-normal">ARS</span></div>
+                <p class="text-[11px] text-slate-400 mt-1">Pago único • Dueño total del sistema</p>
+              </div>
+
+              <!-- Lista de características -->
+              <ul class="space-y-3 font-body text-xs text-slate-300 mb-8">
+                <li class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-check text-purple-400 mt-0.5"></i>
+                  <span><b>Panel de control intuitivo:</b> Creá, editá y eliminá productos en segundos desde tu
+                    celular.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-check text-purple-400 mt-0.5"></i>
+                  <span><b>Capacitación en vivo / Video Tutorial:</b> Sesión 1 a 1 para que domines el uso de tu
+                    tienda.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-check text-purple-400 mt-0.5"></i>
+                  <span><b>Gestión de categorías y stock:</b> Activá o pausá productos agotados al instante.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-check text-purple-400 mt-0.5"></i>
+                  <span><b>Independencia financiera:</b> No dependés de ningún programador para cambiar tus
+                    precios.</span>
+                </li>
+              </ul>
+            </div>
+
+            <button data-plan-name="Plan 3: Autogestionable" data-plan-price="$190.000 ARS"
+              class="btn-hire-plan w-full py-3 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-purple-400 text-white font-mono font-bold text-xs tracking-wider uppercase transition-all flex items-center justify-center gap-2">
+              <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+              <span>Quiero este plan</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ================= PLAN 4: Suscripción / Alquiler Web ================= -->
+        <div class="tilt-card-wrapper plan-card-item" data-plan-type="todos abono">
+          <div
+            class="tilt-card glass-card spotlight-card h-full p-7 flex flex-col justify-between border-slate-800 hover:border-cyan-500/50">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="text-xs font-mono font-semibold px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">Plan
+                  04</span>
+                <span class="text-xs font-mono text-cyan-400 font-bold">Modalidad SaaS</span>
+              </div>
+              <h3 class="text-2xl font-heading font-bold text-white mb-2">Suscripción / Alquiler Web</h3>
+              <p class="text-xs text-slate-400 font-body mb-5">
+                <b class="text-slate-200">Ideal para:</b> Comercios que buscan iniciar su presencia online con una
+                inversión inicial mínima o casi nula.
+              </p>
+
+              <div class="py-4 border-y border-slate-800/80 mb-6 font-mono">
+                <div class="text-3xl font-bold text-white tracking-tight">$45.000 <span
+                    class="text-xs text-slate-400 font-normal">ARS / mes</span></div>
+                <p class="text-[11px] text-slate-400 mt-1">Sin costo alto de ingreso • Cancelás cuando quieras</p>
+              </div>
+
+              <!-- Lista de características -->
+              <ul class="space-y-3 font-body text-xs text-slate-300 mb-8">
+                <li class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-check text-neonCyan mt-0.5"></i>
+                  <span><b>Web activa y funcionando:</b> Tu negocio visible en Google con link profesional.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-check text-neonCyan mt-0.5"></i>
+                  <span><b>Hosting y certificado SSL incluidos:</b> Servidor de alta velocidad cubierto en tu
+                    abono.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-check text-neonCyan mt-0.5"></i>
+                  <span><b>Soporte técnico permanente:</b> Asistencia continua durante todo el tiempo de
+                    alquiler.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-check text-neonCyan mt-0.5"></i>
+                  <span><b>Actualizaciones menores mensuales:</b> Textos, avisos y fotos renovadas todos los
+                    meses.</span>
+                </li>
+              </ul>
+            </div>
+
+            <button data-plan-name="Plan 4: Suscripción / Alquiler Web" data-plan-price="$45.000 ARS/mes"
+              class="btn-hire-plan w-full py-3 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-cyan-400 text-white font-mono font-bold text-xs tracking-wider uppercase transition-all flex items-center justify-center gap-2">
+              <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+              <span>Quiero este plan</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ================= PLAN 5: Landing Express + Catálogo WhatsApp ================= -->
+        <div class="tilt-card-wrapper plan-card-item" data-plan-type="todos unico destacado">
+          <div
+            class="tilt-card glass-card spotlight-card h-full p-7 flex flex-col justify-between border-slate-800 hover:border-emerald-500/50">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="text-xs font-mono font-semibold px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">Plan
+                  05</span>
+                <span class="text-xs font-mono text-emerald-400 font-bold">Rápido Retorno</span>
+              </div>
+              <h3 class="text-2xl font-heading font-bold text-white mb-2">Landing Express + Catálogo WhatsApp</h3>
+              <p class="text-xs text-slate-400 font-body mb-5">
+                <b class="text-slate-200">Ideal para:</b> Emprendimientos de Instagram o TikTok que necesitan un
+                catálogo veloz para cerrar ventas directas en WhatsApp.
+              </p>
+
+              <div class="py-4 border-y border-slate-800/80 mb-6 font-mono">
+                <div class="text-3xl font-bold text-white tracking-tight">$135.000 <span
+                    class="text-xs text-slate-400 font-normal">ARS</span></div>
+                <p class="text-[11px] text-slate-400 mt-1">Pago único • Entrega express</p>
+              </div>
+
+              <!-- Lista de características -->
+              <ul class="space-y-3 font-body text-xs text-slate-300 mb-8">
+                <li class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+                  <span><b>Página única (One-Page) de ultra velocidad:</b> Carga en menos de 0.7 segundos.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+                  <span><b>Catálogo de hasta 12 productos:</b> Con fotos atractivas, descripción y botón de
+                    compra.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+                  <span><b>Carrito Rápido a WhatsApp:</b> Arma el pedido detallado y lo envía a tu chat en 1
+                    clic.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+                  <span><b>Optimización para Link en Bio:</b> Diseñado especialmente para el público móvil de
+                    Instagram.</span>
+                </li>
+              </ul>
+            </div>
+
+            <button data-plan-name="Plan 5: Landing Express + Catálogo WhatsApp" data-plan-price="$135.000 ARS"
+              class="btn-hire-plan w-full py-3 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-emerald-400 text-white font-mono font-bold text-xs tracking-wider uppercase transition-all flex items-center justify-center gap-2">
+              <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+              <span>Quiero este plan</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ================= PLAN 6: E-Commerce Full Automatizado ================= -->
+        <div class="tilt-card-wrapper plan-card-item" data-plan-type="todos unico">
+          <div
+            class="tilt-card glass-card spotlight-card h-full p-7 flex flex-col justify-between border-slate-800 hover:border-blue-500/50">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="text-xs font-mono font-semibold px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">Plan
+                  06</span>
+                <span class="text-xs font-mono text-blue-400 font-bold">Máxima Automatización</span>
+              </div>
+              <h3 class="text-2xl font-heading font-bold text-white mb-2">E-Commerce Full Automatizado</h3>
+              <p class="text-xs text-slate-400 font-body mb-5">
+                <b class="text-slate-200">Ideal para:</b> Marcas consolidadas con alto volumen de pedidos que buscan
+                vender y cobrar 24/7 en automático.
+              </p>
+
+              <div class="py-4 border-y border-slate-800/80 mb-6 font-mono">
+                <div class="text-3xl font-bold text-white tracking-tight">$320.000 <span
+                    class="text-xs text-slate-400 font-normal">ARS</span></div>
+                <p class="text-[11px] text-slate-400 mt-1">Pago único • Infraestructura completa</p>
+              </div>
+
+              <!-- Lista de características -->
+              <ul class="space-y-3 font-body text-xs text-slate-300 mb-8">
+                <li class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-check text-blue-400 mt-0.5"></i>
+                  <span><b>Pasarelas de Pago Integradas:</b> Mercado Pago, tarjetas de crédito/débito y transferencias
+                    con descuento.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-check text-blue-400 mt-0.5"></i>
+                  <span><b>Cálculo Automático de Envíos:</b> Integración con Correo Argentino, Andreani o
+                    Envíopack.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-check text-blue-400 mt-0.5"></i>
+                  <span><b>Control de Stock Automático:</b> Descuenta productos en tiempo real al concretarse el
+                    cobro.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-check text-blue-400 mt-0.5"></i>
+                  <span><b>Panel de Ventas &amp; Métricas:</b> Reportes de pedidos, clientes y facturación.</span>
+                </li>
+              </ul>
+            </div>
+
+            <button data-plan-name="Plan 6: E-Commerce Full Automatizado" data-plan-price="$320.000 ARS"
+              class="btn-hire-plan w-full py-3 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-blue-400 text-white font-mono font-bold text-xs tracking-wider uppercase transition-all flex items-center justify-center gap-2">
+              <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+              <span>Quiero este plan</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. TABLA COMPARATIVA INTERACTIVA ÍTEM POR ÍTEM
+       ========================================================================= -->
+  <section id="comparativa" class="py-24 relative border-t border-slate-800 bg-cyberSurface/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-14">
+        <div
+          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-slate-400 font-mono text-xs">
+          <i class="fa-solid fa-table-cells"></i> Comparativa Técnica Exhaustiva
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-heading font-bold text-white tracking-tight">
+          Compará los 6 planes <span class="text-gradient-cyan">lado a lado</span>
+        </h2>
+        <p class="text-slate-300 font-body text-base">
+          Deslizá la tabla horizontalmente en tu celular para ver qué plan se adapta con exactitud a tu etapa de
+          crecimiento.
+        </p>
+      </div>
+
+      <!-- Tabla con Scroll Horizontal Responsivo -->
+      <div class="glass-card border-slate-800 overflow-x-auto shadow-2xl">
+        <table class="w-full text-left font-body text-xs min-w-[850px]">
+
+          <!-- Encabezado de la tabla -->
+          <thead class="bg-slate-950 font-mono text-[11px] text-slate-300 border-b border-slate-800">
+            <tr>
+              <th class="p-4 w-1/4">Características Clave</th>
+              <th class="p-4 text-center">Plan 1<br><span class="text-slate-500 font-normal">Código</span></th>
+              <th class="p-4 text-center bg-cyan-950/40 text-neonCyan font-bold border-x border-cyan-500/20">Plan 2
+                ★<br><span class="text-cyan-400/80 font-normal">Llave en Mano</span></th>
+              <th class="p-4 text-center">Plan 3<br><span class="text-slate-500 font-normal">Autogestionable</span></th>
+              <th class="p-4 text-center">Plan 4<br><span class="text-slate-500 font-normal">Alquiler</span></th>
+              <th class="p-4 text-center">Plan 5<br><span class="text-slate-500 font-normal">Express</span></th>
+              <th class="p-4 text-center">Plan 6<br><span class="text-slate-500 font-normal">E-Commerce</span></th>
+            </tr>
+          </thead>
+
+          <tbody class="divide-y divide-slate-800/80 text-slate-300">
+
+            <tr class="hover:bg-slate-900/40 transition-colors">
+              <td class="p-4 font-medium text-white flex items-center gap-2">
+                <i class="fa-solid fa-code text-cyan-400"></i> Entrega de Código Fuente
+              </td>
+              <td class="p-4 text-center text-emerald-400 font-bold"><i class="fa-solid fa-check"></i></td>
+              <td class="p-4 text-center bg-cyan-950/20 text-emerald-400 font-bold border-x border-cyan-500/20"><i
+                  class="fa-solid fa-check"></i></td>
+              <td class="p-4 text-center text-emerald-400 font-bold"><i class="fa-solid fa-check"></i></td>
+              <td class="p-4 text-center text-slate-500">Modalidad SaaS</td>
+              <td class="p-4 text-center text-emerald-400 font-bold"><i class="fa-solid fa-check"></i></td>
+              <td class="p-4 text-center text-emerald-400 font-bold"><i class="fa-solid fa-check"></i></td>
+            </tr>
+
+            <tr class="hover:bg-slate-900/40 transition-colors">
+              <td class="p-4 font-medium text-white flex items-center gap-2">
+                <i class="fa-solid fa-sliders text-purple-400"></i> Panel Autogestionable
+              </td>
+              <td class="p-4 text-center text-slate-500"><i class="fa-solid fa-minus"></i></td>
+              <td class="p-4 text-center bg-cyan-950/20 text-slate-300 border-x border-cyan-500/20">Por WhatsApp</td>
+              <td class="p-4 text-center text-emerald-400 font-bold"><i class="fa-solid fa-check"></i> (Completo)</td>
+              <td class="p-4 text-center text-slate-300">A pedido</td>
+              <td class="p-4 text-center text-slate-500"><i class="fa-solid fa-minus"></i></td>
+              <td class="p-4 text-center text-emerald-400 font-bold"><i class="fa-solid fa-check"></i> (Completo)</td>
+            </tr>
+
+            <tr class="hover:bg-slate-900/40 transition-colors">
+              <td class="p-4 font-medium text-white flex items-center gap-2">
+                <i class="fa-solid fa-boxes-packing text-amber-400"></i> Carga de Productos por Mí
+              </td>
+              <td class="p-4 text-center text-slate-500"><i class="fa-solid fa-minus"></i></td>
+              <td class="p-4 text-center bg-cyan-950/20 text-emerald-400 font-bold border-x border-cyan-500/20">Hasta 20
+                prod.</td>
+              <td class="p-4 text-center text-slate-400">Capacitación</td>
+              <td class="p-4 text-center text-slate-400">Hasta 10 prod.</td>
+              <td class="p-4 text-center text-emerald-400 font-bold">Hasta 12 prod.</td>
+              <td class="p-4 text-center text-emerald-400 font-bold">Hasta 30 prod.</td>
+            </tr>
+
+            <tr class="hover:bg-slate-900/40 transition-colors">
+              <td class="p-4 font-medium text-white flex items-center gap-2">
+                <i class="fa-solid fa-credit-card text-emerald-400"></i> Pasarela de Pagos (MP / Tarjetas)
+              </td>
+              <td class="p-4 text-center text-slate-500">Opcional</td>
+              <td class="p-4 text-center bg-cyan-950/20 text-slate-300 border-x border-cyan-500/20">Link o WhatsApp</td>
+              <td class="p-4 text-center text-slate-300">Link o WhatsApp</td>
+              <td class="p-4 text-center text-slate-300">WhatsApp</td>
+              <td class="p-4 text-center text-slate-300">WhatsApp Directo</td>
+              <td class="p-4 text-center text-emerald-400 font-bold"><i class="fa-solid fa-check"></i> Integración Full
+              </td>
+            </tr>
+
+            <tr class="hover:bg-slate-900/40 transition-colors">
+              <td class="p-4 font-medium text-white flex items-center gap-2">
+                <i class="fa-brands fa-whatsapp text-emerald-400"></i> Checkout Directo a WhatsApp
+              </td>
+              <td class="p-4 text-center text-slate-500"><i class="fa-solid fa-minus"></i></td>
+              <td class="p-4 text-center bg-cyan-950/20 text-emerald-400 font-bold border-x border-cyan-500/20"><i
+                  class="fa-solid fa-check"></i></td>
+              <td class="p-4 text-center text-emerald-400 font-bold"><i class="fa-solid fa-check"></i></td>
+              <td class="p-4 text-center text-emerald-400 font-bold"><i class="fa-solid fa-check"></i></td>
+              <td class="p-4 text-center text-emerald-400 font-bold"><i class="fa-solid fa-check"></i></td>
+              <td class="p-4 text-center text-emerald-400 font-bold"><i class="fa-solid fa-check"></i></td>
+            </tr>
+
+            <tr class="hover:bg-slate-900/40 transition-colors">
+              <td class="p-4 font-medium text-white flex items-center gap-2">
+                <i class="fa-solid fa-clock text-sky-400"></i> Tiempo Estimado de Entrega
+              </td>
+              <td class="p-4 text-center font-mono">5 - 7 días</td>
+              <td class="p-4 text-center bg-cyan-950/20 font-mono text-neonCyan font-bold border-x border-cyan-500/20">7
+                - 10 días</td>
+              <td class="p-4 text-center font-mono">7 - 10 días</td>
+              <td class="p-4 text-center font-mono">3 - 5 días</td>
+              <td class="p-4 text-center font-mono">3 - 5 días</td>
+              <td class="p-4 text-center font-mono">10 - 15 días</td>
+            </tr>
+
+            <tr class="hover:bg-slate-900/40 transition-colors">
+              <td class="p-4 font-medium text-white flex items-center gap-2">
+                <i class="fa-solid fa-handshake text-purple-400"></i> Esquema de Pago
+              </td>
+              <td class="p-4 text-center font-mono text-slate-400">50% ant / 50% fin</td>
+              <td class="p-4 text-center bg-cyan-950/20 font-mono text-slate-200 border-x border-cyan-500/20">50% ant /
+                50% fin + Abono</td>
+              <td class="p-4 text-center font-mono text-slate-400">50% ant / 50% fin</td>
+              <td class="p-4 text-center font-mono text-slate-400">Mensual anticipado</td>
+              <td class="p-4 text-center font-mono text-slate-400">50% ant / 50% fin</td>
+              <td class="p-4 text-center font-mono text-slate-400">50% ant / 50% fin</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. SECCIÓN EDUCATIVA: MANTENIMIENTO, DOMINIOS Y HOSTING (TRANSPARENCIA)
+       ========================================================================= -->
+  <section id="infraestructura" class="py-24 relative border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-14">
+        <div
+          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono text-xs font-semibold">
+          <i class="fa-solid fa-book-open"></i> Transparencia Total &amp; Guía Técnica
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-heading font-bold text-white tracking-tight">
+          Dominios, hosting y mantenimiento <span class="text-gradient-emerald">sin secretos</span>
+        </h2>
+        <p class="text-slate-300 font-body text-base">
+          En internet abunda la desinformación. Acá te explico con números exactos cómo funciona la titularidad de tu
+          dominio y qué cuidamos cada mes para que tu web nunca se caiga.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+        <!-- Tarjetas Explicativas -->
+        <div class="lg:col-span-6 space-y-6">
+
+          <!-- Tarjeta Dominios Argentina -->
+          <div class="glass-card spotlight-card p-6 border-slate-800">
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="h-10 w-10 rounded-xl bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center text-neonCyan">
+                <i class="fa-solid fa-globe text-lg"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-heading font-bold text-white">¿Qué es el Dominio y cuánto cuesta en Argentina?
+                </h3>
+                <p class="text-xs font-mono text-cyan-400">Tu dirección única en internet (ej: tu-marca.com.ar)</p>
+              </div>
+            </div>
+
+            <div class="space-y-3 text-xs text-slate-300 leading-relaxed font-body">
+              <p>
+                <b class="text-white font-mono">• NIC Argentina (.com.ar):</b> Es el organismo estatal oficial. Se
+                registra obligatoriamente a tu nombre con tu CUIT/CUIL y Clave Fiscal (Nivel 2 o más). El costo oficial
+                anual ronda entre <span class="text-neonCyan font-mono font-bold">$8.500 y $12.000 ARS/año</span>.
+              </p>
+              <p>
+                <b class="text-white font-mono">• Dominios Internacionales (.com):</b> Se abonan anualmente en
+                registradores globales (Namecheap, GoDaddy, Hostinger) a un costo aproximado de <span
+                  class="text-neonCyan font-mono font-bold">$15.000 a $30.000 ARS/año</span> según el tipo de cambio
+                oficial.
+              </p>
+            </div>
+
+            <!-- Regla de oro destacada -->
+            <div
+              class="mt-4 p-4 rounded-xl bg-gradient-to-r from-cyan-950/40 to-slate-900 border border-cyan-500/30 text-xs">
+              <p class="text-cyan-200 font-medium italic">
+                <i class="fa-solid fa-certificate text-neonCyan mr-1.5"></i>
+                "Yo te asesoro y te guío sin cargo para registrarlo a tu nombre para que vos seas el único dueño real de
+                tu marca en internet y jamás dependas de nadie para renovarlo."
+              </p>
+            </div>
+          </div>
+
+          <!-- Tarjeta Mantenimiento Mensual Opcional -->
+          <div class="glass-card spotlight-card p-6 border-slate-800">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <div
+                  class="h-10 w-10 rounded-xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400">
+                  <i class="fa-solid fa-shield-halved text-lg"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-heading font-bold text-white">Mantenimiento Mensual Opcional</h3>
+                  <p class="text-xs font-mono text-emerald-400">$30.000 ARS / mes</p>
+                </div>
+              </div>
+              <span
+                class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-semibold">100%
+                Opcional</span>
+            </div>
+
+            <p class="text-xs text-slate-300 mb-4 font-body leading-relaxed">
+              Si elegís un plan de pago único, tu web es tuya para siempre. Pero si preferís delegar la tranquilidad
+              técnica, nuestro servicio mensual cubre:
+            </p>
+
+            <ul class="space-y-2.5 text-xs font-body text-slate-300">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-400"></i>
+                <span><b>Backups Semanales:</b> Copia de seguridad en la nube ante cualquier imprevisto.</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-400"></i>
+                <span><b>Parches de Seguridad &amp; SSL:</b> Certificado HTTPS al día y blindaje anti-ataques.</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-400"></i>
+                <span><b>Monitoreo de Uptime 24/7:</b> Alertas automáticas para que tu web nunca esté caída.</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-400"></i>
+                <span><b>Bolsa de Cambios:</b> Actualización de precios, fotos o banners a pedido por WhatsApp.</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Terminal Interactiva de Simulación de Infraestructura -->
+        <div class="lg:col-span-6">
+          <div class="glass-card border-slate-700 shadow-2xl overflow-hidden">
+
+            <!-- Terminal Header -->
+            <div
+              class="px-4 py-3 bg-slate-950 border-b border-slate-800 flex items-center justify-between font-mono text-xs">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+                <span class="text-slate-400 ml-2">bash: /infraestructura/status</span>
+              </div>
+              <!-- Pestañas de comandos -->
+              <div class="flex items-center gap-1 bg-slate-900 p-0.5 rounded-lg border border-slate-800 text-[11px]">
+                <button data-term="nic" class="term-tab-btn px-2 py-1 rounded tab-active transition-all">nic.ar</button>
+                <button data-term="mantenimiento"
+                  class="term-tab-btn px-2 py-1 rounded text-slate-400 hover:text-white transition-all">servicio</button>
+                <button data-term="hosting"
+                  class="term-tab-btn px-2 py-1 rounded text-slate-400 hover:text-white transition-all">hosting</button>
+              </div>
+            </div>
+
+            <!-- Terminal Output Body -->
+            <div
+              class="p-6 bg-[#08090d] min-h-[360px] font-mono text-xs leading-relaxed text-slate-300 overflow-x-auto">
+              <pre id="term-body-content" class="whitespace-pre-wrap">
+<span class="syn-comment"># Consulta de Registración de Dominio Oficial</span>
+<span class="syn-keyword">$</span> whois tu-marca<span class="syn-string">.com.ar</span> --registrador nic.gob.ar
+
+<span class="syn-var">NIC ARGENTINA:</span> Regula los dominios terminados en .com.ar
+<span class="syn-fn">[1] Requisitos:</span> Se registra con tu CUIT/CUIL y Clave Fiscal Nivel 2 o superior.
+<span class="syn-fn">[2] Costo Anual:</span> Aprox. <span class="syn-num">$8.500 a $12.000 ARS/año</span> (arancel oficial estatal).
+<span class="syn-fn">[3] Dominios .COM:</span> Internacionales vía Namecheap/GoDaddy aprox. <span class="syn-num">$15.000 a $30.000 ARS/año</span>.
+
+<span class="text-emerald-400 font-bold">✔ REGLA DE ORO DE TRANSPARENCIA:</span>
+<span class="text-slate-300">Yo te asesoro y te acompaño paso a paso para que el dominio quede <span class="text-cyan-300 font-bold">100% A TU NOMBRE</span>. De esa forma, vos sos el único dueño legítimo de tu marca en internet y nunca dependés de terceros para renovarlo o transferirlo.</span>
+              </pre>
+            </div>
+
+            <div
+              class="px-4 py-2.5 bg-slate-950 border-t border-slate-800 flex items-center justify-between text-[11px] font-mono text-slate-400">
+              <span class="flex items-center gap-1.5 text-emerald-400">
+                <i class="fa-solid fa-shield-cat"></i> Servidores NVMe Edge en Buenos Aires
+              </span>
+              <span>Cloudflare SLA 99.9%</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. PREGUNTAS FRECUENTES (FAQ)
+       ========================================================================= -->
+  <section class="py-20 relative border-t border-slate-800 bg-cyberSurface/30">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+
+      <div class="text-center space-y-3 mb-12">
+        <h2 class="text-3xl font-heading font-bold text-white">Preguntas Frecuentes</h2>
+        <p class="text-slate-400 font-body text-sm">Todo lo que necesitás saber antes de dar el primer paso.</p>
+      </div>
+
+      <div class="space-y-4 font-body">
+
+        <details class="glass-card p-5 rounded-xl border-slate-800 group">
+          <summary class="font-bold text-white text-sm cursor-pointer list-none flex items-center justify-between">
+            <span>¿Cómo es la forma de pago?</span>
+            <i class="fa-solid fa-chevron-down text-cyan-400 transition-transform group-open:rotate-180"></i>
+          </summary>
+          <p class="mt-3 text-xs text-slate-300 leading-relaxed font-body">
+            Trabajamos con un esquema transparente: <b>50% de anticipo</b> para reservar fecha e iniciar la arquitectura
+            del proyecto, y el <b>50% restante contra entrega final</b> y tu completa conformidad cuando la web esté
+            publicada y testeada. Aceptamos transferencia bancaria, Mercado Pago o USDT.
+          </p>
+        </details>
+
+        <details class="glass-card p-5 rounded-xl border-slate-800 group">
+          <summary class="font-bold text-white text-sm cursor-pointer list-none flex items-center justify-between">
+            <span>¿Cuánto tiempo demora el desarrollo?</span>
+            <i class="fa-solid fa-chevron-down text-cyan-400 transition-transform group-open:rotate-180"></i>
+          </summary>
+          <p class="mt-3 text-xs text-slate-300 leading-relaxed font-body">
+            Los planes Express y Catálogo WhatsApp se entregan en <b>3 a 5 días hábiles</b>. Los planes estándar (Código
+            en Mano, Autogestionable o Llave en Mano) demoran entre <b>7 y 10 días hábiles</b> desde que nos enviás el
+            material inicial (fotos y lista de productos).
+          </p>
+        </details>
+
+        <details class="glass-card p-5 rounded-xl border-slate-800 group">
+          <summary class="font-bold text-white text-sm cursor-pointer list-none flex items-center justify-between">
+            <span>¿Qué pasa si no tengo fotos profesionales ni textos listos?</span>
+            <i class="fa-solid fa-chevron-down text-cyan-400 transition-transform group-open:rotate-180"></i>
+          </summary>
+          <p class="mt-3 text-xs text-slate-300 leading-relaxed font-body">
+            No te preocupes. Te ayudo a optimizar las fotos que tengas de tu celular y utilizo bancos de imágenes
+            profesionales para la ambientación. También redacto textos comerciales persuasivos enfocados en tu rubro.
+          </p>
+        </details>
+
+        <details class="glass-card p-5 rounded-xl border-slate-800 group">
+          <summary class="font-bold text-white text-sm cursor-pointer list-none flex items-center justify-between">
+            <span>¿La web se verá bien en teléfonos móviles?</span>
+            <i class="fa-solid fa-chevron-down text-cyan-400 transition-transform group-open:rotate-180"></i>
+          </summary>
+          <p class="mt-3 text-xs text-slate-300 leading-relaxed font-body">
+            Absolutamente. El 85% de tus compradores entrarán desde un celular, por lo que todo se programa bajo la
+            metodología <b>Mobile-First</b>: botones grandes y cómodos para el pulgar, tipografía legible y tiempos de
+            carga instantáneos en 4G.
+          </p>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       8. CONTACTO DIRECTO + FORMULARIO DUAL (WHATSAPP O EMAIL)
+       ========================================================================= -->
+  <section id="contacto" class="py-24 relative border-t border-slate-800 bg-gradient-to-b from-cyberDark to-slate-950">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div
+        class="glass-card spotlight-card border-slate-700/80 p-8 sm:p-12 shadow-[0_0_50px_rgba(0,242,254,0.1)] relative overflow-hidden">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+
+          <!-- Columna Info -->
+          <div class="lg:col-span-5 space-y-6">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-neonCyan font-mono text-xs font-semibold">
+              <i class="fa-solid fa-paper-plane"></i> Charlemos de tu Proyecto
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white tracking-tight leading-tight">
+              ¿Listo para dar el salto profesional?
+            </h2>
+            <p class="text-slate-300 font-body text-xs sm:text-sm leading-relaxed">
+              Completá los datos y elegí si querés recibir la cotización al instante en tu <b>WhatsApp</b> o por
+              <b>Correo Electrónico</b>. Respondo en el día.
+            </p>
+
+            <div class="space-y-4 pt-2 font-mono text-xs">
+              <div class="flex items-center gap-3 text-slate-300">
+                <div
+                  class="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <span>Respuesta rápida por WhatsApp</span>
+              </div>
+              <div class="flex items-center gap-3 text-slate-300">
+                <div
+                  class="w-8 h-8 rounded-lg bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center text-neonCyan">
+                  <i class="fa-solid fa-file-contract"></i>
+                </div>
+                <span>Presupuesto formal detallado</span>
+              </div>
+              <div class="flex items-center gap-3 text-slate-300">
+                <div
+                  class="w-8 h-8 rounded-lg bg-purple-500/20 border border-purple-500/40 flex items-center justify-center text-purple-400">
+                  <i class="fa-solid fa-lock"></i>
+                </div>
+                <span>Tus datos se mantienen en privado</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna Formulario -->
+          <div class="lg:col-span-7">
+            <form id="contact-form" class="space-y-4 font-mono text-xs">
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="form-name" class="block text-slate-300 mb-1.5">Tu Nombre o Negocio *</label>
+                  <input type="text" id="form-name" required placeholder="Ej: Café Moreno / Agustín"
+                    class="w-full px-3.5 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-neonCyan transition-all">
+                </div>
+                <div>
+                  <label for="form-business" class="block text-slate-300 mb-1.5">Rubro o Instagram</label>
+                  <input type="text" id="form-business" placeholder="Ej: @cafemoreno_ar"
+                    class="w-full px-3.5 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-neonCyan transition-all">
+                </div>
+              </div>
+
+              <div>
+                <label for="form-plan" class="block text-slate-300 mb-1.5">Plan de Interés</label>
+                <select id="form-plan"
+                  class="w-full px-3.5 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-neonCyan transition-all">
+                  <option value="Plan 2: Llave en Mano ($220.000 + $35.000/mes) [Recomendado]">Plan 2: Llave en Mano
+                    ($220.000 + $35.000/mes) [MÁS ELEGIDO]</option>
+                  <option value="Plan 1: Código en Mano ($120.000)">Plan 1: Código en Mano ($120.000 ARS)</option>
+                  <option value="Plan 3: Autogestionable ($190.000)">Plan 3: Autogestionable ($190.000 ARS)</option>
+                  <option value="Plan 4: Suscripción / Alquiler Web ($45.000/mes)">Plan 4: Suscripción / Alquiler Web
+                    ($45.000/mes)</option>
+                  <option value="Plan 5: Landing Express + WhatsApp ($135.000)">Plan 5: Landing Express + Catálogo
+                    WhatsApp ($135.000 ARS)</option>
+                  <option value="Plan 6: E-Commerce Full ($320.000)">Plan 6: E-Commerce Full Automatizado ($320.000 ARS)
+                  </option>
+                  <option value="Proyecto Especial a Medida">Proyecto Especial a Medida / Otra consulta</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="form-message" class="block text-slate-300 mb-1.5">Mensaje o requerimiento especial</label>
+                <textarea id="form-message" rows="3"
+                  placeholder="Contame qué vendés, si ya tenés logo o dominio registrado, o qué fecha estimás de lanzamiento..."
+                  class="w-full px-3.5 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-neonCyan transition-all"></textarea>
+              </div>
+
+              <!-- Selector de Canal de Envío (WhatsApp vs Email) -->
+              <div class="pt-2">
+                <span class="block text-slate-300 mb-2">¿Cómo preferís contactarme?</span>
+                <div class="grid grid-cols-2 gap-3">
+                  <label
+                    class="p-3 rounded-xl bg-slate-900 border border-slate-700 flex items-center gap-2 cursor-pointer hover:border-emerald-500 transition-all">
+                    <input type="radio" name="contact-channel" value="whatsapp" checked class="accent-emerald-400">
+                    <span class="text-white flex items-center gap-1.5">
+                      <i class="fa-brands fa-whatsapp text-emerald-400"></i> Por WhatsApp
+                    </span>
+                  </label>
+                  <label
+                    class="p-3 rounded-xl bg-slate-900 border border-slate-700 flex items-center gap-2 cursor-pointer hover:border-cyan-500 transition-all">
+                    <input type="radio" name="contact-channel" value="email" class="accent-cyan-400">
+                    <span class="text-white flex items-center gap-1.5">
+                      <i class="fa-solid fa-envelope text-neonCyan"></i> Por Email
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit"
+                class="btn-shimmer w-full py-4 rounded-xl bg-gradient-to-r from-neonCyan via-blue-500 to-purple-600 hover:opacity-95 text-slate-950 font-mono font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(0,242,254,0.35)] mt-4">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Enviar Consulta Ahora</span>
+              </button>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="py-12 border-t border-slate-800 bg-slate-950 text-slate-400 font-mono text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+
+      <div class="flex items-center gap-3">
+        <span class="font-bold text-white text-sm">&lt;<span class="text-neonCyan">Dev</span>Web <span
+            class="text-neonPurple">/&gt;</span></span>
+        <span class="text-slate-600">|</span>
+        <span>Desarrollo Web &amp; E-Commerce Argentina</span>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="#demo-showcase" class="hover:text-neonCyan transition-colors">Demo</a>
+        <a href="#cotizador-presupuesto" class="hover:text-neonCyan transition-colors">Cotizador</a>
+        <a href="#planes" class="hover:text-neonCyan transition-colors">Planes</a>
+        <a href="#infraestructura" class="hover:text-neonCyan transition-colors">Infraestructura</a>
+        <a href="#contacto" class="hover:text-neonCyan transition-colors">Contacto</a>
+      </div>
+
+      <div class="text-slate-500 text-[11px]">
+        © 2026. Código optimizado • Cero plantillas lentas.
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       WIDGETS FLOTANTES: WHATSAPP NEÓN Y EMAIL (BOTTOM RIGHT)
+       ========================================================================= -->
+  <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3 items-end">
+
+    <!-- Botón Flotante Email -->
+    <a id="floating-email-btn" href="#" aria-label="Enviar Email"
+      class="h-11 w-11 rounded-full bg-slate-900 border border-slate-700 hover:border-cyan-400 text-slate-300 hover:text-neonCyan flex items-center justify-center shadow-lg transition-all hover:scale-110">
+      <i class="fa-solid fa-envelope text-base"></i>
+    </a>
+
+    <!-- Botón Flotante WhatsApp con Pulso Neón -->
+    <a id="floating-wa-btn" href="#" target="_blank" aria-label="Hablar por WhatsApp"
+      class="relative group h-14 w-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 flex items-center justify-center shadow-[0_0_25px_rgba(16,185,129,0.5)] transition-all hover:scale-110">
+      <span class="absolute inset-0 rounded-full bg-emerald-400 status-dot-active opacity-75"></span>
+      <i class="fa-brands fa-whatsapp text-2xl relative z-10 text-slate-950"></i>
+
+      <!-- Tooltip al pasar el mouse -->
+      <span
+        class="absolute right-16 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-slate-200 text-xs font-mono font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-xl pointer-events-none">
+        ¡Hablemos por WhatsApp!
+      </span>
+    </a>
+
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/app.js"></script>
+</body>
+
+</html>
